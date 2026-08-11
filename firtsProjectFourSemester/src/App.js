@@ -15,12 +15,36 @@ export default function App() {
             {/*        a evolução do Pichu e pode evoluir para Raichu com uma Pedra do Trovão.*/}
             {/*    </Text>*/}
             {/*</View>*/}
-            <View>
-                <Text>Nome</Text>
-                {/*<Image source={pikachuImage}/>*/}
-                <TextInput placeholder={"Digite quanta aura voce tem"} keyboardType="numeric" />
-            </View>
+            {/*<View>*/}
+            {/*    <Text>Nome</Text>*/}
+            {/*    /!*<Image source={pikachuImage}/>*!/*/}
+            {/*    <TextInput placeholder={"Digite quanta aura voce tem"}/>*/}
+            {/*</View>*/}
+            {/*<View>*/}
+            {/*    <Text>Senha</Text>*/}
+            {/*    <TextInput placeholder={"Digite quanta senhas voce tem"} secureTextEntry={true}/>*/}
+            {/*</View>*/}
 
+            <View>
+                <Text>Nome:</Text>
+                <TextInput placeholder={"Digite seu nome:"}/>
+            </View>
+            <View>
+                <Text>Sobrenome:</Text>
+                <TextInput placeholder={"Digite seu sobrenome:"}/>
+            </View>
+            <View>
+                <Text>Email:</Text>
+                <TextInput placeholder={"Digite seu email:"} />
+            </View>
+            <View>
+                <Text>CPF:</Text>
+                <TextInput placeholder={"Digite seu CPF"} keyboardType="numeric" />
+            </View>
+            <View>
+                <Text>Senha:</Text>
+                <TextInput placeholder={"Digite sua senha"} secureTextEntry={true}/>
+            </View>
             <View>
                 <Image source={dramaImage}></Image>
                 <Text>O Drama</Text>
