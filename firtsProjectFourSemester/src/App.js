@@ -1,4 +1,4 @@
-import {Text, View, Image, TextInput} from 'react-native';
+import {Text, View, Image, TextInput, Button} from 'react-native';
 import {SafeAreaView} from "react-native-safe-area-context";
 import pikachuImage from './assets/images/pikachu-image.jpg'
 import dramaImage from './assets/images/drama-image.jpg'
@@ -50,6 +50,7 @@ export default function App() {
                 <Text>O Drama</Text>
                 <Text>Um casal feliz e recém-noivado é colocado à prova quando uma revelação inesperada faz com que a semana do casamento saia dos trilhos.</Text>
             </View>
+            <Button  title={"Arroz"} color={"red"}/>
         </SafeAreaView>
     </>);
 }
