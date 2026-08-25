@@ -1,11 +1,11 @@
 import {Image, Pressable, Text, TextInput, View} from 'react-native'
-import {styles} from './style'
+import {Container, styles} from './style'
 import logo from '../../assets/logoShopSwift.png'
 
 export const Register = () => {
     return (
 
-        <View style={styles.containerHome}>
+        <Container>
             <Image source={logo}/>
             <View style={styles.contentHome}>
                 <Text style={styles.txtTitulo}>Crie uma conta <Text
@@ -33,7 +33,7 @@ export const Register = () => {
                 <Text style={styles.txtNaoTemConta}>Tem uma conta? <Text
                     style={styles.txtCriarConta}>Logar</Text></Text>
             </View>
-        </View>
+        </Container>
 
     )
 }
