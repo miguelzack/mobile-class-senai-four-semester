@@ -1,35 +1,36 @@
-import {Image, Pressable, Text, TextInput, View} from 'react-native'
-import {styles} from './style'
+import { View, Image, Text, TextInput, Pressable } from 'react-native'
 import logo from '../../assets/logoShopSwift.png'
+import { styles } from './style'
+import { useNavigation } from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export const Login = () => {
-    return (
 
-        <View style={styles.containerHome}>
-            <Image source={logo}/>
-            <View style={styles.contentHome}>
-                <Text style={styles.txtTitulo}>Faça login e se <Text
-                    style={styles.txtHighlights}>surpreenda</Text></Text>
-                <View style={styles.containerForm}>
-                    <View style={styles.containerInputs}>
-                        <View>
-                            <Text>E-mail:</Text>
-                            <TextInput keyboardType='email-address' style={styles.input}/>
+    const navigation = useNavigation()
+
+    return (
+        <SafeAreaView>
+
+            <View style={styles.containerHome}>
+                <Image source={logo} />
+                <View style={styles.contentHome}>
+                    <Text style={styles.txtTitulo}>Faça login e <Text style={styles.txtHighlights}>se surpreenda</Text></Text>
+                    <View style={styles.containerForm}>
+                        <View style={styles.contentLogin}>
+                            <Text style={styles.txtInput}>Email</Text>
+                            <TextInput style={styles.input} placeholder='insira seu email' keyboardType='email-address' />
                         </View>
-                        <View>
-                            <Text>Senha:</Text>
-                            <TextInput secureTextEntry={true} style={styles.input}/>
+                        <View style={styles.contentLogin}>
+                            <Text style={styles.txtInput}>Senha</Text>
+                            <TextInput style={styles.input} placeholder='insira sua senha' secureTextEntry={true} />
                         </View>
                     </View>
-                    <Pressable style={styles.buttonLogin}>
-                        <Text style={styles.txtLogin}>Entrar</Text>
-                    </Pressable>
+                    <View style={styles.dontHaveAccount}>
+                        <Pressable onPress={() => navigation.navigate("home")} style={styles.button}><Text style={styles.txtButton}>Entrar</Text></Pressable>
+                        <Text style={styles.dontHaveAccountTxt}>Não tem conta ? <Text style={styles.createAccountTxt}>Criar Conta</Text></Text>
+                    </View>
                 </View>
-
-                <Text style={styles.txtNaoTemConta}>Não tem uma conta? <Text style={styles.txtCriarConta}>Criar
-                    conta</Text></Text>
             </View>
-        </View>
-
+        </SafeAreaView>
     )
 }
